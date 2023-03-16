@@ -12,7 +12,7 @@ fn main_1() {
 }
 
 @fragment 
-fn fs_main(@location(0) v_color: vec4<f32>) -> FragmentOutput {
+fn main(@location(0) v_color: vec4<f32>) -> FragmentOutput {
     v_color_1 = v_color;
     main_1();
     let _e7 = out_color;

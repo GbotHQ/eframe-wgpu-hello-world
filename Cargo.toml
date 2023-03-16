@@ -13,6 +13,7 @@ egui_glow = "0.21.0"
 env_logger = "0.10.0"
 glow = "0.12.1"
 log = "0.4.17"
+shaderc = "0.8.2"
 wgpu = {version = "0.15.1", features = ["glsl", "spirv"]}
 
 # debug build optimizations

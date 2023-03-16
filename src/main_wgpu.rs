@@ -93,12 +93,12 @@ impl MyApp {
             layout: Some(&pipeline_layout),
             vertex: wgpu::VertexState {
                 module: &vertex_shader,
-                entry_point: "vs_main",
+                entry_point: "main",
                 buffers: &[],
             },
             fragment: Some(wgpu::FragmentState {
                 module: &fragment_shader,
-                entry_point: "fs_main",
+                entry_point: "main",
                 targets: &[Some(render_state.target_format.into())],
             }),
             primitive: wgpu::PrimitiveState::default(),

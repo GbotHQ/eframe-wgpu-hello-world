@@ -33,7 +33,7 @@ fn main_1() {
 }
 
 @vertex 
-fn vs_main(@builtin(vertex_index) param: u32) -> VertexOutput {
+fn main(@builtin(vertex_index) param: u32) -> VertexOutput {
     gl_VertexIndex = param;
     _ = array<vec2<f32>,3u>(vec2<f32>(0.0, 1.0), vec2<f32>(-(1.0), -(1.0)), vec2<f32>(1.0, -(1.0)));
     _ = array<vec4<f32>,3u>(vec4<f32>(1.0, 0.0, 0.0, 1.0), vec4<f32>(0.0, 1.0, 0.0, 1.0), vec4<f32>(0.0, 0.0, 1.0, 1.0));

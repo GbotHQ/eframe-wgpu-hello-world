@@ -1,0 +1,23 @@
+[package]
+name = "eframe_wgpu_hello_world"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bytemuck = "1.13.1"
+eframe = {version = "0.21.3", features = ["wgpu"]}
+egui-wgpu = "0.21.0"
+egui_glow = "0.21.0"
+env_logger = "0.10.0"
+glow = "0.12.1"
+log = "0.4.17"
+wgpu = {version = "0.15.1", features = ["glsl", "spirv"]}
+
+# debug build optimizations
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3

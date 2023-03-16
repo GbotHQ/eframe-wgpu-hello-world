@@ -1,0 +1,53 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(Windows) Launch",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/target/debug/eframe_wgpu_hello_world.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "externalTerminal"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'eframe_wgpu_hello_world'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=eframe_wgpu_hello_world",
+                    "--package=eframe_wgpu_hello_world"
+                ],
+                "filter": {
+                    "name": "eframe_wgpu_hello_world",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'eframe_wgpu_hello_world'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=eframe_wgpu_hello_world",
+                    "--package=eframe_wgpu_hello_world"
+                ],
+                "filter": {
+                    "name": "eframe_wgpu_hello_world",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

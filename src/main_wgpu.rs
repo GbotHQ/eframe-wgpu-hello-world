@@ -58,13 +58,13 @@ impl MyApp {
         let vertex_shader = device.create_shader_module(wgpu::ShaderModuleDescriptor {
             label: Some("triangle vs"),
             source: wgpu::ShaderSource::Wgsl(
-                include_str!("./compiled/custom3d_naga_shader_vert.wgsl").into(),
+                include_str!("./shaders/compiled/custom3d_shader.vert.wgsl").into(),
             ),
         });
         let fragment_shader = device.create_shader_module(wgpu::ShaderModuleDescriptor {
             label: Some("triangle fs"),
             source: wgpu::ShaderSource::Wgsl(
-                include_str!("./compiled/custom3d_naga_shader_frag.wgsl").into(),
+                include_str!("./shaders/compiled/custom3d_shader.frag.wgsl").into(),
             ),
         });
 

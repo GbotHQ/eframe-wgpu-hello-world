@@ -113,8 +113,8 @@ impl RotatingTriangle {
             let program = gl.create_program().expect("Cannot create program");
 
             let (vertex_shader_source, fragment_shader_source) = (
-                include_str!("./custom3d_glow_shader.vert"),
-                include_str!("./custom3d_glow_shader.frag"),
+                include_str!("./shaders/glow_compatible/custom3d_shader.vert"),
+                include_str!("./shaders/glow_compatible/custom3d_shader.frag"),
             );
 
             let shader_sources = [

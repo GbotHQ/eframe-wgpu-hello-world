@@ -8,10 +8,14 @@ const vec4 colors[3] = vec4[3](
     vec4(0.0, 1.0, 0.0, 1.0),
     vec4(0.0, 0.0, 1.0, 1.0)
 );
+
 out vec4 v_color;
-uniform float u_angle;
+layout(binding=0) uniform AngleBlock {
+    float u_angle;
+};
+
 void main() {
-    v_color = colors[gl_VertexID];
-    gl_Position = vec4(verts[gl_VertexID], 0.0, 1.0);
+    v_color = colors[gl_VertexIndex];
+    gl_Position = vec4(verts[gl_VertexIndex], 0.0, 1.0);
     gl_Position.x *= cos(u_angle);
 }
